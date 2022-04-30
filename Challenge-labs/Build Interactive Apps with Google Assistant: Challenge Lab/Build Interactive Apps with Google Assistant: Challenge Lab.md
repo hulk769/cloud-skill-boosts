@@ -41,11 +41,23 @@ gcloud functions deploy $CLOUDFUNCTION_NAME \
 
 ## Task 2: Create the Magic 8 Ball app for Google Assistant
 
+Goto to the Action Console link provided --> New Project --> select new project --> import project --> click on your project --> action console --> click on your project --> Decide how your Action is invoked --> Enter Display Name (magic 8 ball) --> Save
 
+Build your Action:
+Go to Action console --> click on your project --> Build your Action --> Add Action(s) --> Get Started --> Build --> Sign in with your account in the Dialogflow window(if needed) --> create --> Fullfillment --> Webhook --> Enable --> Enter url --> here enter the trigger url of the cloud function created --> Save 
+
+Intents --> Click on "Default Welcome Intent" --> Responses --> Add Responses --> Text Response --> Enter "Welcome to the lab magic 8 ball, ask me a yes or no question and I will predict the future!"
+as response --> Save
+
+Intents --> Click on "Default Fallback Intent" --> Responses --> enable Set this intent as end of conversation --> Fulfillment --> enable Enable webhook call for this intent --> Save
+
+You can test in Dialogflow to ensure it works.
 
 ## Task 3: Add multilingual support to your Cloud Function
 
+Cloud Funcctions --> Trigger --> Edit --> Next --> Update the main.py file at line 13(line no. may differ) --> Deploy 
 
+Goto to Dialogflow window --> Test --> Test the sentences
 
 # Congratulations you've completed your challenge lab
 ## Happy Learning
